@@ -1,21 +1,25 @@
 const express = require('express');
-const socketio = require('socket.io');
 const http = require('http');
 
-const PORT = process.env.PORT || 5000
+const app = express();
+
+const PORT = process.env.PORT || 5000;
 
 const router = require('./router');
-
-const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
 
-io.on('connection', (socket) => {
-    console.log('we have a new connection');
-    
+const socketio = require('socket.io');
+const io = socketio(server, {
+    cors: {
+      origin: '*',
+    }
+  });
+
+io.on('connect', (socket) => {
+    console.log('We have a new connection!!!');
     socket.on('disconnect', () => {
-        console.log('User had left :(');
-    });
+        console.log('Disconnection of a user');
+    })
 });
 
 
