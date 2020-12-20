@@ -32,7 +32,7 @@ const Message = ({message : {user, text}, name}) => {
                         {ReactEmoji.emojify(text)}
                     </p>
                 </div>
-                <p className="sentText pl-10">{trimedName}</p>
+                <p className="sentText pl-10">{user}</p>
             </div>
         )
     )

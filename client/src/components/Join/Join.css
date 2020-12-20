@@ -35,7 +35,20 @@ html, body {
     color: white;
     font-size: 2.5em;
     padding-bottom: 10px;
+    margin-bottom: 10px;
     border-bottom: 2px solid white;
+  }
+
+  .subtitle {
+    color: white;
+    font-size: 1em;
+    padding-bottom: 5 px;
+  }
+
+  .linkToCode {
+    color: rgb(137, 235, 235);
+    font-size:1em;
+    padding-top: 5px;
   }
   
   .button {
