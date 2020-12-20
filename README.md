@@ -1,5 +1,8 @@
 MyChat Application
 
+A local chat, or to deploy on a server.
+Made with nodejs, reactjs, et socketio
+
 # How to run
 
 ## Client Side
